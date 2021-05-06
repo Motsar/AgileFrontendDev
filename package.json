@@ -21,7 +21,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "cross-env CI=true react-scripts test --env=jsdom",
+    "test": "react-scripts test",
     "cypress": "cypress open",
     "lint": "eslint src",
     "eject": "react-scripts eject"
@@ -51,6 +51,7 @@
     "eslint-plugin-cypress": "^2.11.3",
     "eslint-plugin-jest": "^24.3.6",
     "eslint-plugin-prettier": "^3.4.0",
+    "flush-promises": "^1.0.2",
     "prettier": "^2.2.1"
   }
 }
