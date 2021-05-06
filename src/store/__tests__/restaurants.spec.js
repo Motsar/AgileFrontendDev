@@ -156,6 +156,14 @@ describe('restaurants', () => {
       });
     });
 
+    describe('when save fails', () => {
+      it('rejects', () => {
+        api.createRestaurant.mockRejectedValue();
+        promise = store.dispatch(createRestaurant(newRestaurantName));
+        return expect(promise).rejects.toBeUndefined();
+      });
+    });
+
     it('saves the restaurant to the server', () => {
       api.createRestaurant.mockResolvedValue(responseRestaurant);
       store.dispatch(createRestaurant(newRestaurantName));
